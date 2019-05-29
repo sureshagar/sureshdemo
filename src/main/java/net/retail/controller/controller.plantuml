@@ -1,0 +1,19 @@
+@startuml
+
+title __CONTROLLER's Class Diagram__\n
+
+  package  {
+    package net.retail {
+      package net.retail.controller {
+        class BillController {
+            + getNetAmount()
+        }
+      }
+    }
+  }
+  
+
+  BillController o-- BillUtil : billUtil
+
+
+@enduml
