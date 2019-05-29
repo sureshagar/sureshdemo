@@ -1,9 +1,19 @@
 package net.retail.net_retail;
 
+import net.retail.model.Customer;
+import net.retail.model.Product;
+import net.retail.model.Request;
+import net.retail.model.Response;
+import net.retail.util.BillUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -11,6 +21,7 @@ public class NetRetailApplicationTests {
 
 	@Autowired
 	private BillUtil billUtil;
+
 	@Test
 	public void getNetAmount() {
 
@@ -47,5 +58,6 @@ public class NetRetailApplicationTests {
 		assert (testres.getBillTotal() == 40);
 
 	}
+
 
 }
